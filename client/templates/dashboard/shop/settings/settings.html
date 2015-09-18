@@ -1,6 +1,6 @@
 <template name="shopSettings">
-
   <div class="panel-group" id="shopSettingsAccordian" role="tablist" aria-multiselectable="true">
+
     <div class="panel panel-default">
       <div class="panel-heading">
         <div class="panel-title">
@@ -24,7 +24,6 @@
         </div>
       </div>
     </div>
-
 
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -52,7 +51,6 @@
         </div>
       </div>
     </div>
-
 
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -105,15 +103,30 @@
             {{> afQuickField name='settings.google.apiKey'}}
             {{> shopSettingsSubmitButton}}
           {{/autoForm}}
+        </div>
       </div>
     </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <div class="panel-title">
+          <a href="#ssl" aria-controls="ssl" role="button" data-toggle="collapse" data-parent="#shopSettingsAccordian" data-i18n="shopSettings.ssl">SSL</a>
+        </div>
+      </div>
+      <div id="ssl" class="panel-collapse collapse" role="tabpanel" aria-labelledby="ssl">
+        <div class="panel-body">
+          {{#autoForm collection="ReactionCore.Collections.Packages" schema="ReactionCore.Schemas.CorePackageConfig" doc=packageData id="shopEditSsl" type="update"}}
+            {{> afQuickField name='settings.ssl.privateKey' type='textarea' rows=6}}
+            {{> afQuickField name='settings.ssl.certificate' type='textarea' rows=6}}
+            {{> afQuickField name='settings.domain'}}
+            {{> shopSettingsSubmitButton}}
+          {{/autoForm}}
+        </div>
+      </div>
+    </div>
+
   </div>
-
-</div>
-
-
 </template>
-
 
 
 <template name="shopSettingsSubmitButton">

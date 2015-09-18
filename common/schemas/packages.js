@@ -154,6 +154,19 @@ ReactionCore.Schemas.CorePackageConfig = new SimpleSchema([
     "settings.public.allowGuestCheckout": {
       type: Boolean,
       label: "Allow Guest Checkout"
+    },
+    "settings.domain": {
+      type: String,
+      regEx: SimpleSchema.RegEx.Url,
+      label: "Root URL"
+    },
+    "settings.ssl.privateKey": {
+      type: String,
+      label: "SSL Private Key"
+    },
+    "settings.ssl.certificate": {
+      type: String,
+      label: "SSL Certificate"
     }
   }
 ]);

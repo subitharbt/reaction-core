@@ -150,3 +150,16 @@ AutoForm.hooks({
     }
   }
 });
+
+AutoForm.hooks({
+  shopEditSsl: {
+    onSuccess: function(operation, result, template) {
+      return Alerts.add("SSL options saved.", "success", {
+        autoHide: true
+      });
+    },
+    onError: function(operation, error, template) {
+      return Alerts.add("SSL options update failed. " + error, "danger");
+    }
+  }
+});
