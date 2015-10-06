@@ -1,8 +1,8 @@
 Package.describe({
   summary: "Reaction Commerce Core",
-  name: "reactioncommerce:core",
-  version: "0.8.1",
-  git: "https://github.com/reactioncommerce/reaction-core.git"
+  name: "subitha:core",
+  version: "0.0.1",
+  git: "https://github.com/subitharbt/reaction-core.git"
 });
 
 Npm.depends({
